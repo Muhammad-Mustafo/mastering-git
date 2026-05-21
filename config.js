@@ -15,6 +15,15 @@ function showTodos() {
     });
 }
 
+function removeTodo(index) {
+    if (index > 0 && index <= todos.length) {
+        const removed = todos.splice(index - 1, 1);
+        console.log(`Vazifa o'chirildi: ${removed[0]}`);
+    } else {
+        console.log("Noto'g'ri indeks. Iltimos, to'g'ri indeks kiriting.");
+    }
+}
+
 // Sinab ko'ramiz
 addTodo("Git branch'larni o'zlashtirish");
 showTodos();
